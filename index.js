@@ -2,7 +2,9 @@ let express = require("express");
 let Controller = require("./Controller/Controller");
 
 let app = express();
-Controller(app)
+
+// Routing The Data Flow
+app.use("/api",Controller)
 
 
 app.listen(process.env.port || 4000 , () => {
