@@ -14,6 +14,10 @@ const rakibSchema = new mongoose.Schema({
     available : {
         type : Boolean,
         default : false
+    },
+    location : {
+        type : String,
+        default : "Bangladesh"
     }
 })
 
