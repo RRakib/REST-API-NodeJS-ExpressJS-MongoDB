@@ -1,31 +1,38 @@
 let express = require("express");
 let router = express.Router();
 
+
+
 // GET Request
-router.get("/get" , (req, res) => {
+router.get("/rakib" , (req, res) => {
     res.send({
         type : "GET"
     })
 })
 
 // POST Request
-router.post("/post" , (req, res) => {
+router.post("/rakib" , (req, res) => {
+    console.log(req.body)
     res.send({
-        type : "GET"
+        type : "POST",
+        name : req.body.name,
+        id : req.body.id
     })
 })
 
 // PUT Request
-router.put("/put" , (req, res) => {
+router.put("/rakib/:id" , (req, res) => {
     res.send({
-        type : "GET"
+        type : "PUT",
+        id : req.params.id
     })
 })
 
 // DELETE Request
-router.delete("/delete" , (req, res) => {
+router.delete("/rakib/:id" , (req, res) => {
     res.send({
-        type : "GET"
+        type : "DELETE",
+        id : req.params.id
     })
 })
 
