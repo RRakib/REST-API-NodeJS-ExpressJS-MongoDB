@@ -1,9 +1,27 @@
 let express = require("express");
 let Controller = require("./Controller/Controller");
+let mongoose = require("mongoose");
+
+
+
+// Connecting To MongoDB Atlas
+mongoose.connect("mongodb://Rakib:12345@todo-shard-00-00-ptl6e.mongodb.net:27017,todo-shard-00-01-ptl6e.mongodb.net:27017,todo-shard-00-02-ptl6e.mongodb.net:27017/REST-API?ssl=true&replicaSet=todo-shard-0&authSource=admin&retryWrites=true" , {useNewUrlParser : true})
+mongoose.connection.once("open", () => {
+    console.log("Connected To MongoDB Atlas");
+})
+mongoose.connection.on("error" , (err) => {
+    console.log("Error Occoured: " + err)
+})
+
+
+
+
+
 
 let app = express();
 app.use(express.urlencoded({ extended : false}))
 app.use(express.json())
+
 
 
 // Routing The Data Flow
