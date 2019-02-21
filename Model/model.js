@@ -17,7 +17,8 @@ const rakibSchema = new mongoose.Schema({
     },
     location : {
         type : String,
-        default : "Bangladesh"
+        default : "Bangladesh",
+        required : [true , "Please Fill Up This Filed"]
     }
 })
 

@@ -20,8 +20,8 @@ router.get("/friends/api" , (req, res) => {
         res.send(" Could Not Find Data. " + err)
     })
 })
-router.get("/rakib/:location" , (req, res) => {
-    Friends.find({ location : req.params.location}).then((data) => {
+router.get("/rakib" , (req, res) => {
+    Friends.find({ location : req.query.location}).then((data) => {
         res.send(data)
     })
 })

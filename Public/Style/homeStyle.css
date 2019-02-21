@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #bff3ec;
+    text-align: center;
+    padding-top: 25px;
+    font-family: Kaushan Script;
+    color: #444;
+}
+h1{
+    margin: 7% 0 10px 0;
+}
+h1 a{
+    font-size: 65px;
+    color: #444;
+    text-decoration: none;
+}
+div a{
+    text-decoration: none;
+    color: #1fd51f;
+    font-size: 22px;
+}
+div a:hover{
+    color: green;
+}
+.lctn{
+    padding: 5px;
+    width: 25%;
+    border: none;
+    outline: none;
+    background: #fdfdfd;
+    border-radius: 5px;
+    margin: 15px 0 15px 0;
+}
+.smt{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: green;
+    padding: 1px 15px;
+    border-radius: 5px;
+    font-family: Kaushan Script;
+}
