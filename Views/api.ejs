@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/Style/style.css">
+    <title>Friends API</title>
+</head>
+<body>
+
+    <div class="center">
+        <b>[</b>
+        <% for(let i = 0 ; i < info.length; i++){ %>
+        <p>
+            {
+                <br/>
+                    &emsp;&emsp; <strong style="color:darkgreen">"id":</strong>  <%= info[i]._id %>,   <br/>
+                    &emsp;&emsp;<strong style="color:darkgreen">"name":</strong>  <%= info[i].name %>, <br/>
+                    &emsp;&emsp;<strong style="color:darkgreen">"field":</strong>  <%= info[i].field %>,<br/>
+                    &emsp;&emsp;<strong style="color:darkgreen">"location":</strong>  <%= info[i].location %>, <br/>
+                    &emsp;&emsp;<strong style="color:darkgreen">"available":</strong>  <%= info[i].available %>, 
+                <br/>
+            },
+        </p>
+
+        <% } %>
+        <b>]</b>
+    </div>
+</body>
+</html>

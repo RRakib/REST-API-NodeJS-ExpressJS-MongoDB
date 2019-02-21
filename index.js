@@ -1,5 +1,6 @@
 let express = require("express");
 let Controller = require("./Controller/Controller");
+let homeController = require("./Controller/homeController");
 let mongoose = require("mongoose");
 
 
@@ -21,11 +22,14 @@ mongoose.connection.on("error" , (err) => {
 let app = express();
 app.use(express.urlencoded({ extended : false}))
 app.use(express.json())
+app.set("view engine" , "ejs");
+app.use(express.static("./Public"))
 
 
 
 // Routing The Data Flow
 app.use("/api",Controller)
+app.use("/",homeController)
 
 
 app.listen(process.env.port || 4000 , () => {

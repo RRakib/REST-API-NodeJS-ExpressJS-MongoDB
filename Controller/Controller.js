@@ -2,11 +2,26 @@ let express = require("express");
 let router = express.Router();
 let Friends = require("../Model/model");
 
-
+// res.send({
+//             id : data._id,
+//             name : data.name,
+//             location : data.location,
+//             field : data.field,
+//             available : data.available
+//         })
 
 // GET Request
-router.get("/rakib" , (req, res) => {
-    Friends.find({}).then((data) => {
+router.get("/friends/api" , (req, res) => {
+    Friends.find({}).then(data => {
+        res.render("api" , {
+            info : data
+        })
+    }).catch((err) => {
+        res.send(" Could Not Find Data. " + err)
+    })
+})
+router.get("/rakib/:location" , (req, res) => {
+    Friends.find({ location : req.params.location}).then((data) => {
         res.send(data)
     })
 })

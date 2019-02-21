@@ -1,0 +1,14 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #fafafa;
+    color : #4d74a5;
+}
+P{
+    margin: 0;
+}
+.center{
+    padding: 50px;
+}
