@@ -14,7 +14,7 @@ submit.addEventListener("click" , (e) => {
             output.innerHTML = "Please Insert Data"
         }
         for(let i = 0; i < res.length; i++){
-            output.innerHTML += `<b>Name: </b>${res[i].name} <p><strong>Field: </strong>${res[i].field}</p><br />`
+            output.innerHTML += `<b>Name: </b>${res[i].name} <p><strong>Field: </strong>${res[i].field}</p> <p><strong>Available: </strong>${res[i].available}</p><br />`
         }
     })
     .catch((err) => {
